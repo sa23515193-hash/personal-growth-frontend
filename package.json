@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sa23515193-hash.github.io/personal-growth-tracker/",
+  "homepage": "https://sa23515193-hash.github.io/personal-growth/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
