@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/personal-growth-tracker/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Growth Tracker 🌱</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN (optional, if not using Tailwind locally) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: #f9fafb;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+      }
+
+      /* Center loading text before React mounts */
+      #root::before {
+        content: "🌿 Loading Personal Growth Tracker...";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: #d1fae5;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+        animation: fade 2s infinite;
+      }
+      #root:has(*)::before {
+  content: none !important;
+}
+
+
+      @keyframes fade {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+    </style>
+    <script type="module" crossorigin src="/personal-growth-tracker/assets/index-BOK1brF6.js"></script>
+    <link rel="stylesheet" crossorigin href="/personal-growth-tracker/assets/index-C4RLFTme.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

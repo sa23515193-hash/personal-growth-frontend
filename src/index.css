@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Make sure app fills screen and no extra top space */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ✅ Prevent unwanted top gap */
+body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* ✅ Optional smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🌿 Keep scrollbar style */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #e6f9ec;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #16a34a;
+  border-radius: 8px;
+  border: 2px solid #e6f9ec;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #15803d;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #16a34a #e6f9ec;
+}
