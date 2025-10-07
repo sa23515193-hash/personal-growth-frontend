@@ -1,10 +1,9 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// ✅ Replace "yourusername" and "reponame" accordingly
+// ⚙️ Change "personal-growth-frontend" to your exact repo name
 export default defineConfig({
   plugins: [react()],
-  base: "/Self-improves/", // 👈 IMPORTANT for GitHub Pages
-});
-
+  base: '/personal-growth-frontend/', // 👈 ye line 100% zaruri hai
+})
 
