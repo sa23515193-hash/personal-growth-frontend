@@ -10,31 +10,40 @@ const FeedbackForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/feedback", { username, email, rating, comment });
-      alert("Feedback submitted!");
-      setUsername(""); setEmail(""); setRating(0); setComment("");
+      await axios.post("https://intelligent-inspiration-production.up.railway.app/api/feedback", {
+        username,
+        email,
+        rating,
+        comment,
+      });
+      alert("✅ Feedback submitted successfully!");
+      setUsername("");
+      setEmail("");
+      setRating(0);
+      setComment("");
     } catch (err) {
-      alert("Error submitting feedback");
+      console.error(err);
+      alert("❌ Error submitting feedback. Please try again later.");
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="p-4 bg-white shadow-md rounded-md text-black">
-      <input 
-        placeholder="Name" 
-        value={username} 
-        onChange={e=>setUsername(e.target.value)} 
-        className="border p-2 w-full mb-2 text-black" 
+      <input
+        placeholder="Name"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        className="border p-2 w-full mb-2 text-black"
       />
-      <input 
-        placeholder="Email" 
-        value={email} 
-        onChange={e=>setEmail(e.target.value)} 
-        className="border p-2 w-full mb-2 text-black" 
+      <input
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="border p-2 w-full mb-2 text-black"
       />
-      <select 
-        value={rating} 
-        onChange={e=>setRating(Number(e.target.value))} 
+      <select
+        value={rating}
+        onChange={(e) => setRating(Number(e.target.value))}
         className="border p-2 w-full mb-2 text-black"
       >
         <option value={0}>Select Rating</option>
@@ -44,14 +53,14 @@ const FeedbackForm = () => {
         <option value={4}>4 ⭐⭐⭐⭐</option>
         <option value={5}>5 ⭐⭐⭐⭐⭐</option>
       </select>
-      <textarea 
-        placeholder="Comment" 
-        value={comment} 
-        onChange={e=>setComment(e.target.value)} 
+      <textarea
+        placeholder="Comment"
+        value={comment}
+        onChange={(e) => setComment(e.target.value)}
         className="border p-2 w-full mb-2 text-black"
       />
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
-        Submit
+      <button type="submit" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition">
+        Submit Feedback
       </button>
     </form>
   );

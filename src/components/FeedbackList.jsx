@@ -5,7 +5,7 @@ const FeedbackList = () => {
   const [feedbacks, setFeedbacks] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/feedback")
+    axios.get("https://intelligent-inspiration-production.up.railway.app/api/feedback")
       .then(res => setFeedbacks(res.data))
       .catch(err => console.log(err));
   }, []);

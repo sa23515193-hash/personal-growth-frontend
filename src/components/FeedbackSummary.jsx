@@ -9,7 +9,7 @@ const FeedbackSummary = () => {
   });
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/feedback/summary")
+    axios.get("https://intelligent-inspiration-production.up.railway.app/api/feedback")
       .then(res => setSummary(res.data))
       .catch(err => console.log(err));
   }, []);
