@@ -8,6 +8,9 @@ import DailyRoutine from "../pages/Routine";
 import SelfCareTracker from "../pages/SelfCare";
 import StudyProgress from "../pages/Study";
 import Motivation from "../pages/Motivation";
+import FeedbackForm from "../components/FeedbackForm";
+import FeedbackList from "../components/FeedbackList";
+
 
 const Dashboard = () => {
   // 👇 Track which section is active
@@ -82,12 +85,17 @@ const Dashboard = () => {
       >
         {renderSection()}
       </div>
-
+<div className="mt-6">
+  <h2 className="text-xl font-bold mb-2">Feedback & Reviews</h2>
+  <FeedbackForm />
+  <FeedbackList />
+</div>
       {/* 🌸 Footer */}
       <footer className="text-center text-gray-500 mt-auto mb-6">
         © {new Date().getFullYear()} Personal Growth Tracker — Made with 💚 by Sawaira
       </footer>
     </div>
+
   );
 };
 

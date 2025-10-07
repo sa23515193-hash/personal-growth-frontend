@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaDumbbell, FaBookOpen, FaLeaf, FaMoon, FaSmile } from "react-icons/fa";
+import FeedbackSummary from "../components/FeedbackSummary.jsx"; // ✅ Import added
 
 const HomePage = () => {
   return (
-    
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-green-50 to-green-100 text-gray-800 mt-0 pt-0">
-     <div className="h-16"></div>  
+      {/* Empty space for Navbar */}
+      <div className="h-16"></div>  
+
       {/* 🌸 Hero Section */}
       <section className="flex flex-col items-center justify-center text-center px-6 py-10 mt-16 sm:mt-20">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-green-700 mb-4">
@@ -23,7 +25,6 @@ const HomePage = () => {
           >
             Get Started
           </Link>
-          
         </div>
       </section>
 
@@ -72,6 +73,9 @@ const HomePage = () => {
           ))}
         </div>
       </section>
+
+      {/* 💬 Feedback Section */}
+      <FeedbackSummary />
 
       {/* 🌸 Footer */}
       <footer className="text-center py-6 bg-green-700 text-white mt-auto">
